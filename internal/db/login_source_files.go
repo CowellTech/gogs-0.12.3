@@ -15,8 +15,8 @@ import (
 	"github.com/pkg/errors"
 	"gopkg.in/ini.v1"
 
-	"gogs.io/gogs/internal/errutil"
-	"gogs.io/gogs/internal/osutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/osutil"
 )
 
 // loginSourceFilesStore is the in-memory interface for login source files stored on file system.

@@ -14,17 +14,17 @@ import (
 	"strings"
 	"time"
 
-	"github.com/json-iterator/go"
+	jsoniter "github.com/json-iterator/go"
 	gouuid "github.com/satori/go.uuid"
 	log "unknwon.dev/clog/v2"
 	"xorm.io/xorm"
 
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/errutil"
-	"gogs.io/gogs/internal/httplib"
-	"gogs.io/gogs/internal/sync"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/httplib"
+	"github.com/CowellTech/gogs-0.12.3/internal/sync"
 )
 
 var HookQueue = sync.NewUniqueQueue(1000)

@@ -7,7 +7,7 @@ package gitutil
 import (
 	"testing"
 
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 )
 
 var _ ModuleStore = (*MockModuleStore)(nil)

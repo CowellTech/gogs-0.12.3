@@ -19,12 +19,12 @@ import (
 	"github.com/urfave/cli"
 	log "unknwon.dev/clog/v2"
 
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/email"
-	"gogs.io/gogs/internal/httplib"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/email"
+	"github.com/CowellTech/gogs-0.12.3/internal/httplib"
 )
 
 var (

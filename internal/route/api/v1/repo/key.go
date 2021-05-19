@@ -7,20 +7,20 @@ package repo
 import (
 	"net/http"
 
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 	"github.com/pkg/errors"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/route/api/v1/convert"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/convert"
 )
 
 func composeDeployKeysAPILink(repoPath string) string {
 	return conf.Server.ExternalURL + "api/v1/repos/" + repoPath + "/keys/"
 }
 
-// https://github.com/gogs/go-gogs-client/wiki/Repositories-Deploy-Keys#list-deploy-keys
+// https://github.com/CowellTech/go-gogs-client/wiki/Repositories-Deploy-Keys#list-deploy-keys
 func ListDeployKeys(c *context.APIContext) {
 	keys, err := db.ListDeployKeys(c.Repo.Repository.ID)
 	if err != nil {
@@ -41,7 +41,7 @@ func ListDeployKeys(c *context.APIContext) {
 	c.JSONSuccess(&apiKeys)
 }
 
-// https://github.com/gogs/go-gogs-client/wiki/Repositories-Deploy-Keys#get-a-deploy-key
+// https://github.com/CowellTech/go-gogs-client/wiki/Repositories-Deploy-Keys#get-a-deploy-key
 func GetDeployKey(c *context.APIContext) {
 	key, err := db.GetDeployKeyByID(c.ParamsInt64(":id"))
 	if err != nil {
@@ -77,7 +77,7 @@ func HandleAddKeyError(c *context.APIContext, err error) {
 	}
 }
 
-// https://github.com/gogs/go-gogs-client/wiki/Repositories-Deploy-Keys#add-a-new-deploy-key
+// https://github.com/CowellTech/go-gogs-client/wiki/Repositories-Deploy-Keys#add-a-new-deploy-key
 func CreateDeployKey(c *context.APIContext, form api.CreateKeyOption) {
 	content, err := db.CheckPublicKeyString(form.Key)
 	if err != nil {
@@ -96,7 +96,7 @@ func CreateDeployKey(c *context.APIContext, form api.CreateKeyOption) {
 	c.JSON(http.StatusCreated, convert.ToDeployKey(apiLink, key))
 }
 
-// https://github.com/gogs/go-gogs-client/wiki/Repositories-Deploy-Keys#remove-a-deploy-key
+// https://github.com/CowellTech/go-gogs-client/wiki/Repositories-Deploy-Keys#remove-a-deploy-key
 func DeleteDeploykey(c *context.APIContext) {
 	if err := db.DeleteDeployKey(c.User, c.ParamsInt64(":id")); err != nil {
 		if db.IsErrKeyAccessDenied(err) {

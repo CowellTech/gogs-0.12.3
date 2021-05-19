@@ -11,10 +11,10 @@ import (
 	log "unknwon.dev/clog/v2"
 	"xorm.io/xorm"
 
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
 )
 
 // Milestone represents a milestone of repository.

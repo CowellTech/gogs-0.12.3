@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"gogs.io/gogs/internal/testutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/testutil"
 )
 
 func TestIsProdMode(t *testing.T) {

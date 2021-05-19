@@ -16,9 +16,9 @@ import (
 	"gopkg.in/ini.v1"
 	log "unknwon.dev/clog/v2"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/semverutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/semverutil"
 )
 
 var Restore = cli.Command{

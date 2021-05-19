@@ -13,11 +13,11 @@ import (
 	log "unknwon.dev/clog/v2"
 	"xorm.io/xorm"
 
-	"github.com/gogs/git-module"
-	api "github.com/gogs/go-gogs-client"
+	"github.com/CowellTech/git-module-1.1.2"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/errutil"
-	"gogs.io/gogs/internal/process"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/process"
 )
 
 // Release represents a release of repository.

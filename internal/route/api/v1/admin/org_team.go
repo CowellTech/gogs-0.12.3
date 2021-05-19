@@ -7,12 +7,12 @@ package admin
 import (
 	"net/http"
 
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/route/api/v1/convert"
-	"gogs.io/gogs/internal/route/api/v1/user"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/convert"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/user"
 )
 
 func CreateTeam(c *context.APIContext, form api.CreateTeamOption) {

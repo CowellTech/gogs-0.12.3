@@ -5,7 +5,7 @@
 package gitutil
 
 import (
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 )
 
 // ModuleStore is the interface for Git operations.

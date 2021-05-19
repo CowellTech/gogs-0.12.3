@@ -10,7 +10,7 @@ Gogs（`/gɑgz/`）项目旨在打造一个以最简便的方式搭建简单、�
 
 - 请移步[官网](https://gogs.io)查看用户使用文档
 - 请通过 [CHANGELOG.md](CHANGELOG.md) 文件查看各个版本的变更历史
-- 想要先睹为快？直接去[在线体验](https://try.gogs.io/gogs/gogs)吧！
+- 想要先睹为快？直接去[在线体验](https://try.github.com/CowellTech/gogs-0.12.3/gogs)吧！
 - 使用过程中遇到问题？尝试[故障排查](https://gogs.io/docs/intro/troubleshooting.html)或者前往[用户论坛](https://discuss.gogs.io/)获取帮助
 - 希望帮助多国语言的翻译吗？请查看[本地化文档](https://gogs.io/docs/features/i18n.html)
 - 准备搞点事情？请阅读[开发指南](docs/local_development.md)配置开发环境

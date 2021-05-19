@@ -10,16 +10,16 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/gogs/git-module"
-	api "github.com/gogs/go-gogs-client"
+	"github.com/CowellTech/git-module-1.1.2"
+	api "github.com/CowellTech/go-gogs-client"
 	jsoniter "github.com/json-iterator/go"
 	"gopkg.in/macaron.v1"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/db/errors"
-	"gogs.io/gogs/internal/form"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/db/errors"
+	"github.com/CowellTech/gogs-0.12.3/internal/form"
 )
 
 const (

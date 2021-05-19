@@ -10,8 +10,8 @@ import (
 
 	"xorm.io/xorm"
 
-	"gogs.io/gogs/internal/db/errors"
-	"gogs.io/gogs/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/db/errors"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
 )
 
 const OWNER_TEAM = "Owners"
@@ -33,7 +33,7 @@ type Team struct {
 func (t *Team) AfterSet(colName string, _ xorm.Cell) {
 	switch colName {
 	case "num_repos":
-		// LEGACY [1.0]: this is backward compatibility bug fix for https://gogs.io/gogs/issues/3671
+		// LEGACY [1.0]: this is backward compatibility bug fix for https://github.com/CowellTech/gogs-0.12.3/issues/3671
 		if t.NumRepos < 0 {
 			t.NumRepos = 0
 		}

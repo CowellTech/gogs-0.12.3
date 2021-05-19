@@ -11,16 +11,16 @@ import (
 	"github.com/go-macaron/binding"
 	"gopkg.in/macaron.v1"
 
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/form"
-	"gogs.io/gogs/internal/route/api/v1/admin"
-	"gogs.io/gogs/internal/route/api/v1/misc"
-	"gogs.io/gogs/internal/route/api/v1/org"
-	"gogs.io/gogs/internal/route/api/v1/repo"
-	"gogs.io/gogs/internal/route/api/v1/user"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/form"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/admin"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/misc"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/org"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/repo"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/user"
 )
 
 // repoAssignment extracts information from URL parameters to retrieve the repository,

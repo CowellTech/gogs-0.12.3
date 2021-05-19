@@ -15,14 +15,14 @@ import (
 	log "unknwon.dev/clog/v2"
 	"xorm.io/xorm"
 
-	"github.com/gogs/git-module"
-	api "github.com/gogs/go-gogs-client"
+	"github.com/CowellTech/git-module-1.1.2"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/errutil"
-	"gogs.io/gogs/internal/osutil"
-	"gogs.io/gogs/internal/process"
-	"gogs.io/gogs/internal/sync"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/osutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/process"
+	"github.com/CowellTech/gogs-0.12.3/internal/sync"
 )
 
 var PullRequestQueue = sync.NewUniqueQueue(1000)

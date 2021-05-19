@@ -26,18 +26,18 @@ import (
 	log "unknwon.dev/clog/v2"
 	"xorm.io/xorm"
 
-	"github.com/gogs/git-module"
-	api "github.com/gogs/go-gogs-client"
+	"github.com/CowellTech/git-module-1.1.2"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/avatar"
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/db/errors"
-	"gogs.io/gogs/internal/errutil"
-	"gogs.io/gogs/internal/markup"
-	"gogs.io/gogs/internal/osutil"
-	"gogs.io/gogs/internal/process"
-	"gogs.io/gogs/internal/semverutil"
-	"gogs.io/gogs/internal/sync"
+	"github.com/CowellTech/gogs-0.12.3/internal/avatar"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/db/errors"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/markup"
+	"github.com/CowellTech/gogs-0.12.3/internal/osutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/process"
+	"github.com/CowellTech/gogs-0.12.3/internal/semverutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/sync"
 )
 
 // REPO_AVATAR_URL_PREFIX is used to identify a URL is to access repository avatar.

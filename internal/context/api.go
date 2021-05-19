@@ -13,8 +13,8 @@ import (
 	"gopkg.in/macaron.v1"
 	log "unknwon.dev/clog/v2"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
 )
 
 type APIContext struct {
@@ -26,7 +26,7 @@ type APIContext struct {
 	Org *APIOrganization
 }
 
-// FIXME: move this constant to github.com/gogs/go-gogs-client
+// FIXME: move this constant to github.com/CowellTech/go-gogs-client
 const DocURL = "https://github.com/gogs/docs-api"
 
 // NoContent renders the 204 response.

@@ -7,17 +7,17 @@ package repo
 import (
 	"net/http"
 
-	api "github.com/gogs/go-gogs-client"
-	"github.com/json-iterator/go"
+	api "github.com/CowellTech/go-gogs-client"
+	jsoniter "github.com/json-iterator/go"
 	"github.com/pkg/errors"
 	"github.com/unknwon/com"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/route/api/v1/convert"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/convert"
 )
 
-// https://github.com/gogs/go-gogs-client/wiki/Repositories#list-hooks
+// https://github.com/CowellTech/go-gogs-client/wiki/Repositories#list-hooks
 func ListHooks(c *context.APIContext) {
 	hooks, err := db.GetWebhooksByRepoID(c.Repo.Repository.ID)
 	if err != nil {
@@ -32,7 +32,7 @@ func ListHooks(c *context.APIContext) {
 	c.JSONSuccess(&apiHooks)
 }
 
-// https://github.com/gogs/go-gogs-client/wiki/Repositories#create-a-hook
+// https://github.com/CowellTech/go-gogs-client/wiki/Repositories#create-a-hook
 func CreateHook(c *context.APIContext, form api.CreateHookOption) {
 	if !db.IsValidHookTaskType(form.Type) {
 		c.ErrorStatus(http.StatusUnprocessableEntity, errors.New("Invalid hook type."))
@@ -103,7 +103,7 @@ func CreateHook(c *context.APIContext, form api.CreateHookOption) {
 	c.JSON(http.StatusCreated, convert.ToHook(c.Repo.RepoLink, w))
 }
 
-// https://github.com/gogs/go-gogs-client/wiki/Repositories#edit-a-hook
+// https://github.com/CowellTech/go-gogs-client/wiki/Repositories#edit-a-hook
 func EditHook(c *context.APIContext, form api.EditHookOption) {
 	w, err := db.GetWebhookOfRepoByID(c.Repo.Repository.ID, c.ParamsInt64(":id"))
 	if err != nil {

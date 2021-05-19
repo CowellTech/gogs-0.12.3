@@ -15,10 +15,10 @@ import (
 	"github.com/go-macaron/binding"
 	"github.com/unknwon/com"
 
-	"gogs.io/gogs/internal/auth/github"
-	"gogs.io/gogs/internal/auth/ldap"
-	"gogs.io/gogs/internal/auth/pam"
-	"gogs.io/gogs/internal/db/errors"
+	"github.com/CowellTech/gogs-0.12.3/internal/auth/github"
+	"github.com/CowellTech/gogs-0.12.3/internal/auth/ldap"
+	"github.com/CowellTech/gogs-0.12.3/internal/auth/pam"
+	"github.com/CowellTech/gogs-0.12.3/internal/db/errors"
 )
 
 type LoginType int

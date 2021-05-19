@@ -12,8 +12,8 @@ import (
 	"github.com/jinzhu/gorm"
 	"github.com/pkg/errors"
 
-	"gogs.io/gogs/internal/cryptoutil"
-	"gogs.io/gogs/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/cryptoutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
 )
 
 // UsersStore is the persistent interface for users.

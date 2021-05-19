@@ -5,13 +5,13 @@
 package repo
 
 import (
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/route/api/v1/convert"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/convert"
 )
 
-// https://github.com/gogs/go-gogs-client/wiki/Repositories#get-branch
+// https://github.com/CowellTech/go-gogs-client/wiki/Repositories#get-branch
 func GetBranch(c *context.APIContext) {
 	branch, err := c.Repo.Repository.GetBranch(c.Params("*"))
 	if err != nil {
@@ -25,10 +25,10 @@ func GetBranch(c *context.APIContext) {
 		return
 	}
 
-	c.JSONSuccess( convert.ToBranch(branch, commit))
+	c.JSONSuccess(convert.ToBranch(branch, commit))
 }
 
-// https://github.com/gogs/go-gogs-client/wiki/Repositories#list-branches
+// https://github.com/CowellTech/go-gogs-client/wiki/Repositories#list-branches
 func ListBranches(c *context.APIContext) {
 	branches, err := c.Repo.Repository.GetBranches()
 	if err != nil {
@@ -46,9 +46,9 @@ func ListBranches(c *context.APIContext) {
 		apiBranches[i] = convert.ToBranch(branches[i], commit)
 	}
 
-	c.JSONSuccess( &apiBranches)
+	c.JSONSuccess(&apiBranches)
 }
 
 func CreateBranch(c *context.APIContext) {
-	
+
 }

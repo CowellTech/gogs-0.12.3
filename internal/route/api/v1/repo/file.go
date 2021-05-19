@@ -5,12 +5,12 @@
 package repo
 
 import (
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/gitutil"
-	"gogs.io/gogs/internal/route/repo"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/gitutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/repo"
 )
 
 func GetRawFile(c *context.APIContext) {

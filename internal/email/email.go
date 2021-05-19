@@ -15,9 +15,9 @@ import (
 	"gopkg.in/macaron.v1"
 	log "unknwon.dev/clog/v2"
 
-	"gogs.io/gogs/internal/assets/templates"
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/markup"
+	"github.com/CowellTech/gogs-0.12.3/internal/assets/templates"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/markup"
 )
 
 const (

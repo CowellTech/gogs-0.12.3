@@ -7,7 +7,7 @@ package db
 import (
 	"testing"
 
-	"gogs.io/gogs/internal/lfsutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/lfsutil"
 )
 
 // NOTE: Mocks are sorted in alphabetical order.

@@ -14,7 +14,7 @@ import (
 
 	"gopkg.in/macaron.v1"
 
-	"gogs.io/gogs/internal/osutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/osutil"
 )
 
 //go:generate go-bindata -nomemcopy -ignore="\\.DS_Store" -pkg=templates -prefix=../../../templates -debug=false -o=templates_gen.go ../../../templates/...

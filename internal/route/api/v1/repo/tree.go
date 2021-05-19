@@ -7,10 +7,10 @@ package repo
 import (
 	"fmt"
 
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/gitutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/gitutil"
 )
 
 func GetRepoGitTree(c *context.APIContext) {

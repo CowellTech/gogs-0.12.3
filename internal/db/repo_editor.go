@@ -19,15 +19,15 @@ import (
 	gouuid "github.com/satori/go.uuid"
 	"github.com/unknwon/com"
 
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/cryptoutil"
-	"gogs.io/gogs/internal/db/errors"
-	"gogs.io/gogs/internal/gitutil"
-	"gogs.io/gogs/internal/osutil"
-	"gogs.io/gogs/internal/process"
-	"gogs.io/gogs/internal/tool"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/cryptoutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/db/errors"
+	"github.com/CowellTech/gogs-0.12.3/internal/gitutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/osutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/process"
+	"github.com/CowellTech/gogs-0.12.3/internal/tool"
 )
 
 const (
@@ -487,7 +487,7 @@ func (repo *Repository) UploadRepoFiles(doer *User, opts UploadRepoFileOptions) 
 			continue
 		}
 
-		// Prevent copying files into .git directory, see https://gogs.io/gogs/issues/5558.
+		// Prevent copying files into .git directory, see https://github.com/CowellTech/gogs-0.12.3/issues/5558.
 		if isRepositoryGitPath(upload.Name) {
 			continue
 		}

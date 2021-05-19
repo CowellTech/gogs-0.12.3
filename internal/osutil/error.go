@@ -7,7 +7,7 @@ package osutil
 import (
 	"os"
 
-	"gogs.io/gogs/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
 )
 
 var _ errutil.NotFound = (*Error)(nil)

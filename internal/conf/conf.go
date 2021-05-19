@@ -22,9 +22,9 @@ import (
 	"gopkg.in/ini.v1"
 	log "unknwon.dev/clog/v2"
 
-	"gogs.io/gogs/internal/assets/conf"
-	"gogs.io/gogs/internal/osutil"
-	"gogs.io/gogs/internal/semverutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/assets/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/osutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/semverutil"
 )
 
 func init() {

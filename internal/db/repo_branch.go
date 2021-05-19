@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 	"github.com/unknwon/com"
 
-	"gogs.io/gogs/internal/errutil"
-	"gogs.io/gogs/internal/tool"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/tool"
 )
 
 type Branch struct {

@@ -9,12 +9,12 @@ import (
 
 	log "unknwon.dev/clog/v2"
 
-	"github.com/gogs/git-module"
-	api "github.com/gogs/go-gogs-client"
+	"github.com/CowellTech/git-module-1.1.2"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/tool"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/tool"
 )
 
 const (
@@ -91,7 +91,7 @@ func Branches(c *context.Context) {
 
 	c.Data["ActiveBranches"] = activeBranches
 	c.Data["StaleBranches"] = staleBranches
-	c.Success( BRANCHES_OVERVIEW)
+	c.Success(BRANCHES_OVERVIEW)
 }
 
 func AllBranches(c *context.Context) {
@@ -104,7 +104,7 @@ func AllBranches(c *context.Context) {
 	}
 	c.Data["Branches"] = branches
 
-	c.Success( BRANCHES_ALL)
+	c.Success(BRANCHES_ALL)
 }
 
 func DeleteBranchPost(c *context.Context) {

@@ -5,7 +5,7 @@ RUN apk --no-cache --no-progress add --virtual \
   git \
   linux-pam-dev
 
-WORKDIR /gogs.io/gogs
+WORKDIR /github.com/CowellTech/gogs-0.12.3
 COPY . .
 RUN make build-no-gen TAGS="cert pam"
 
@@ -33,7 +33,7 @@ COPY docker/nsswitch.conf /etc/nsswitch.conf
 
 WORKDIR /app/gogs
 COPY docker ./docker
-COPY --from=binarybuilder /gogs.io/gogs/gogs .
+COPY --from=binarybuilder /github.com/CowellTech/gogs-0.12.3/gogs .
 
 RUN ./docker/finalize.sh
 

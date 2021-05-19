@@ -5,9 +5,9 @@
 package gitutil
 
 import (
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 
-	"gogs.io/gogs/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
 )
 
 var _ errutil.NotFound = (*Error)(nil)

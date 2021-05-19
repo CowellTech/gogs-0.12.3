@@ -5,11 +5,11 @@
 package admin
 
 import (
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/route/api/v1/repo"
-	"gogs.io/gogs/internal/route/api/v1/user"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/repo"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/user"
 )
 
 func CreateRepo(c *context.APIContext, form api.CreateRepoOption) {

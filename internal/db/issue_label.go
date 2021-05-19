@@ -12,11 +12,11 @@ import (
 
 	"xorm.io/xorm"
 
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/errutil"
-	"gogs.io/gogs/internal/lazyregexp"
-	"gogs.io/gogs/internal/tool"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/lazyregexp"
+	"github.com/CowellTech/gogs-0.12.3/internal/tool"
 )
 
 var labelColorPattern = lazyregexp.New("#([a-fA-F0-9]{6})")

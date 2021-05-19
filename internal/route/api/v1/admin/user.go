@@ -7,14 +7,14 @@ package admin
 import (
 	"net/http"
 
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 	log "unknwon.dev/clog/v2"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/email"
-	"gogs.io/gogs/internal/route/api/v1/user"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/email"
+	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/user"
 )
 
 func parseLoginSource(c *context.APIContext, u *db.User, sourceID int64, loginName string) {

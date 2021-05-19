@@ -8,10 +8,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 	"github.com/stretchr/testify/assert"
 
-	"gogs.io/gogs/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
 )
 
 func TestError_NotFound(t *testing.T) {

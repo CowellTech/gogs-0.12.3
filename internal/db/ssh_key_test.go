@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"gogs.io/gogs/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
 )
 
 func Test_SSHParsePublicKey(t *testing.T) {

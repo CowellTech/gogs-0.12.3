@@ -12,8 +12,8 @@ import (
 	"github.com/pquerna/otp/totp"
 	"github.com/unknwon/com"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/cryptoutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/cryptoutil"
 )
 
 // TwoFactor is a 2FA token of a user.

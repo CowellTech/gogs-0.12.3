@@ -16,9 +16,9 @@ import (
 	"github.com/jinzhu/gorm"
 	log "unknwon.dev/clog/v2"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/dbutil"
-	"gogs.io/gogs/internal/testutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/dbutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/testutil"
 )
 
 var printSQL = flag.Bool("print-sql", false, "Print SQL executed")

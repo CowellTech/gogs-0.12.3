@@ -5,10 +5,10 @@
 package misc
 
 import (
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/markup"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/markup"
 )
 
 func Markdown(c *context.APIContext, form api.MarkdownOption) {

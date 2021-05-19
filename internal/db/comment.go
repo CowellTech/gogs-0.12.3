@@ -13,10 +13,10 @@ import (
 	log "unknwon.dev/clog/v2"
 	"xorm.io/xorm"
 
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 
-	"gogs.io/gogs/internal/errutil"
-	"gogs.io/gogs/internal/markup"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/markup"
 )
 
 // CommentType defines whether a comment is just a simple comment, an action (like close) or a reference.

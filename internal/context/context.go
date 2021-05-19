@@ -18,12 +18,12 @@ import (
 	"gopkg.in/macaron.v1"
 	log "unknwon.dev/clog/v2"
 
-	"gogs.io/gogs/internal/auth"
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/db"
-	"gogs.io/gogs/internal/errutil"
-	"gogs.io/gogs/internal/form"
-	"gogs.io/gogs/internal/template"
+	"github.com/CowellTech/gogs-0.12.3/internal/auth"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
+	"github.com/CowellTech/gogs-0.12.3/internal/errutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/form"
+	"github.com/CowellTech/gogs-0.12.3/internal/template"
 )
 
 // Context represents context of a request.

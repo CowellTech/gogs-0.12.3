@@ -9,11 +9,11 @@ import (
 	"fmt"
 	"path"
 
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 	"github.com/pkg/errors"
 
-	"gogs.io/gogs/internal/context"
-	"gogs.io/gogs/internal/gitutil"
+	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/gitutil"
 )
 
 func GetContents(c *context.APIContext) {

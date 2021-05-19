@@ -9,7 +9,7 @@ import (
 
 	log "unknwon.dev/clog/v2"
 
-	api "github.com/gogs/go-gogs-client"
+	api "github.com/CowellTech/go-gogs-client"
 )
 
 // Collaboration represent the relation between an individual and a repository.

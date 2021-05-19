@@ -9,8 +9,8 @@ import (
 
 	"github.com/microcosm-cc/bluemonday"
 
-	"gogs.io/gogs/internal/lazyregexp"
-	"gogs.io/gogs/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/lazyregexp"
 )
 
 // Sanitizer is a protection wrapper of *bluemonday.Policy which does not allow

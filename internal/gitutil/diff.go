@@ -16,11 +16,11 @@ import (
 	"golang.org/x/net/html/charset"
 	"golang.org/x/text/transform"
 
-	"github.com/gogs/git-module"
+	"github.com/CowellTech/git-module-1.1.2"
 
-	"gogs.io/gogs/internal/conf"
-	"gogs.io/gogs/internal/template/highlight"
-	"gogs.io/gogs/internal/tool"
+	"github.com/CowellTech/gogs-0.12.3/internal/conf"
+	"github.com/CowellTech/gogs-0.12.3/internal/template/highlight"
+	"github.com/CowellTech/gogs-0.12.3/internal/tool"
 )
 
 // DiffSection is a wrapper to git.DiffSection with helper methods.
