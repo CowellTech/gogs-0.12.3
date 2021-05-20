@@ -284,6 +284,16 @@ func RegisterRoutes(m *macaron.Macaron) {
 					m.Get("", repo.ListBranches)
 					m.Get("/*", repo.GetBranch)
 				})
+
+				// 增加创建分支，删除分支，获取分支信息的接口
+				// Add by gbren
+				m.Group("/branch", func() {
+					m.Get("/*", repo.GetBranch)
+					m.Combo("").
+						Post(bind(api.CreateBranchOption{}), repo.CreateBranch)
+					m.Combo("/:name").
+						Delete(repo.DeleteBranch)
+				})
 				m.Group("/commits", func() {
 					m.Get("/:sha", repo.GetSingleCommit)
 					m.Get("/*", repo.GetReferenceSHA)
