@@ -3,7 +3,7 @@ module github.com/CowellTech/gogs-0.12.3
 go 1.16
 
 require (
-	github.com/CowellTech/git-module-1.1.2 v0.0.0-20210519084812-3c4b81b809e5
+	github.com/CowellTech/git-module-1.1.2 v0.0.0-20210520063700-a8247ab2f1aa
 	github.com/CowellTech/go-gogs-client v0.0.0-20210519081741-004ebd8172a5
 	github.com/Masterminds/semver/v3 v3.1.1
 	github.com/editorconfig/editorconfig-core-go/v2 v2.4.2
@@ -22,13 +22,14 @@ require (
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/issue9/identicon v1.2.0
-	github.com/jaytaylor/html2text v0.0.0-20200412013138-3577fbdbcff7
+	github.com/jaytaylor/html2text v0.0.0-20190408195923-01ec452cbe43
 	github.com/jinzhu/gorm v1.9.16
 	github.com/json-iterator/go v1.1.11
 	github.com/microcosm-cc/bluemonday v1.0.9
 	github.com/msteinert/pam v0.0.0-20201130170657-e61372126161
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
 	github.com/niklasfasching/go-org v1.5.0
+	github.com/olekukonko/tablewriter v0.0.1 // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/pquerna/otp v1.3.0
 	github.com/prometheus/client_golang v1.10.0
@@ -53,7 +54,7 @@ require (
 	gopkg.in/ldap.v2 v2.5.1
 	gopkg.in/macaron.v1 v1.4.0
 	unknwon.dev/clog/v2 v2.2.0
-	xorm.io/builder v0.3.9
-	xorm.io/core v0.7.3
-	xorm.io/xorm v1.1.0
+	xorm.io/builder v0.3.6
+	xorm.io/core v0.7.2
+	xorm.io/xorm v0.8.0
 )
