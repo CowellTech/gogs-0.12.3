@@ -7,7 +7,7 @@ RUN apk --no-cache --no-progress add --virtual \
 
 WORKDIR /github.com/CowellTech/gogs-0.12.3
 COPY . .
-RUN make build-no-gen TAGS="cert pam"
+RUN export GOPROXY=https://goproxy.io,direct && go env && make build-no-gen TAGS="cert pam"
 
 FROM alpine:3.11
 ADD https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64 /usr/sbin/gosu
