@@ -4,10 +4,10 @@ cloud.google.com/go v0.37.4/go.mod h1:NHPJ89PdicEuT9hdPXMROBD91xc5uRDxsMtSB16k7h
 gitea.com/lunny/log v0.0.0-20190322053110-01b5df579c4e/go.mod h1:uJEsN4LQpeGYRCjuPXPZBClU7N5pWzGuyF4uqLpE/e0=
 gitea.com/lunny/nodb v0.0.0-20200923032308-3238c4655727/go.mod h1:h0OwsgcpJLSYtHcM5+Xciw9OEeuxi6ty4HDiO8C7aIY=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
-github.com/CowellTech/git-module-1.1.2 v0.0.0-20210520063700-a8247ab2f1aa h1:nY0bVG+GRltQlwCjcXkp9GfJ3x9bSfrk4mlBFPyxF+0=
-github.com/CowellTech/git-module-1.1.2 v0.0.0-20210520063700-a8247ab2f1aa/go.mod h1:okAjvhrEHzfmmFAcRppKfRVtbZfp6vj0gluF5o88MZ4=
-github.com/CowellTech/go-gogs-client v0.0.0-20210519081741-004ebd8172a5 h1:Ge5czRd2oRG9/SibKZAitAatq/Ztn12yEGAzRMs2XqI=
-github.com/CowellTech/go-gogs-client v0.0.0-20210519081741-004ebd8172a5/go.mod h1:zbl9CnNztcXXm+zOxeZIjXxho4VTydFHKYg4fFYB5Vs=
+github.com/CowellTech/git-module-1.1.2 v0.0.0-20210521025457-534b3fa1a986 h1:Lz0beBNSLqAH+cBz7xoF+ygDA9/G97zCeuaZnDFg5hM=
+github.com/CowellTech/git-module-1.1.2 v0.0.0-20210521025457-534b3fa1a986/go.mod h1:okAjvhrEHzfmmFAcRppKfRVtbZfp6vj0gluF5o88MZ4=
+github.com/CowellTech/go-gogs-client v0.0.0-20210521030711-894bc81c0708 h1:83p1KMR4yUjm36nV2+OVxOHTFe79exPFSfck9Cg1FdQ=
+github.com/CowellTech/go-gogs-client v0.0.0-20210521030711-894bc81c0708/go.mod h1:5EQ1FDgW7j89u8lK6ZRoZnVauTIPFRCnbE96G6FWH04=
 github.com/Knetic/govaluate v3.0.1-0.20171022003610-9aa49832a739+incompatible/go.mod h1:r7JcOSlj0wfOMncg0iLm8Leh48TZaKVeNIfJntJ2wa0=
 github.com/Masterminds/semver/v3 v3.1.1 h1:hLg3sBzpNErnxhQtUy/mmLR2I9foDujNK030IGemrRc=
 github.com/Masterminds/semver/v3 v3.1.1/go.mod h1:VPu/7SZ7ePZ3QOrcuXROw5FAcLl4a0cBrbBpGY/8hQs=

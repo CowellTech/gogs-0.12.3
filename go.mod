@@ -3,8 +3,8 @@ module github.com/CowellTech/gogs-0.12.3
 go 1.16
 
 require (
-	github.com/CowellTech/git-module-1.1.2 v0.0.0-20210520063700-a8247ab2f1aa
-	github.com/CowellTech/go-gogs-client v0.0.0-20210519081741-004ebd8172a5
+	github.com/CowellTech/git-module-1.1.2 v0.0.0-20210521025457-534b3fa1a986
+	github.com/CowellTech/go-gogs-client v0.0.0-20210521030711-894bc81c0708
 	github.com/Masterminds/semver/v3 v3.1.1
 	github.com/editorconfig/editorconfig-core-go/v2 v2.4.2
 	github.com/go-macaron/binding v1.1.1
