@@ -249,6 +249,10 @@ func RegisterRoutes(m *macaron.Macaron) {
 		})
 
 		m.Group("/repos", func() {
+			m.Post("/raw", repo.GetRawFiles)
+			m.Group("/branchs", func() {
+				m.Post("/diff", repo.DiffBranchList)
+			})
 			m.Post("/migrate", bind(form.MigrateRepo{}), repo.Migrate)
 			m.Delete("/:username/:reponame", repoAssignment(), repo.Delete)
 
@@ -289,6 +293,7 @@ func RegisterRoutes(m *macaron.Macaron) {
 				// Add by gbren
 				m.Group("/branch", func() {
 					m.Get("/*", repo.GetBranch)
+					m.Get("/diff/:branch1/:branch2", repo.DiffBranch)
 					m.Combo("").
 						Post(bind(api.CreateBranchOption{}), repo.CreateBranch)
 					m.Combo("/:name").
