@@ -81,7 +81,21 @@ func CreateBranch(c *context.APIContext, form api.CreateBranchOption) {
 		return
 	}
 
-	c.JSONSuccess(&form)
+	baseCommit, err := gitRepo.BranchCommit(base)
+	if err != nil {
+		c.Error(errors.New("ErrGetCommit"), "git cat-file failed")
+		return
+	}
+
+	res := struct {
+		Name   string      `json:"name"`
+		Commit *git.Commit `json:"commit"`
+	}{
+		Name:   branchname,
+		Commit: baseCommit,
+	}
+
+	c.JSONSuccess(&res)
 }
 
 func DeleteBranch(c *context.APIContext) {
