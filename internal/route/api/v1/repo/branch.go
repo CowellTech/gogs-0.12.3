@@ -81,18 +81,26 @@ func CreateBranch(c *context.APIContext, form api.CreateBranchOption) {
 		return
 	}
 
-	baseCommit, err := gitRepo.BranchCommit(base)
+	baseCommitID, err := gitRepo.BranchCommitID(base)
 	if err != nil {
-		c.Error(errors.New("ErrGetCommit"), "git cat-file failed")
+		c.Error(errors.New("ErrGitShowRef"), "git show-ref failed")
+		return
+	}
+
+	baseCommit, err := gitRepo.CommitByRevision(baseCommitID)
+	if err != nil {
+		c.Error(errors.New("ErrRevisionNotExist"), "bad revision")
 		return
 	}
 
 	res := struct {
-		Name   string      `json:"name"`
-		Commit *git.Commit `json:"commit"`
+		Name   string `json:"name"`
+		Commit string `json:"commit"`
+		Msg    string `json:"message"`
 	}{
 		Name:   branchname,
-		Commit: baseCommit,
+		Commit: baseCommitID,
+		Msg:    baseCommit.Message,
 	}
 
 	c.JSONSuccess(&res)
