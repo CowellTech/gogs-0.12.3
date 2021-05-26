@@ -13,6 +13,7 @@ import (
 	api "github.com/CowellTech/go-gogs-client"
 
 	"github.com/CowellTech/gogs-0.12.3/internal/context"
+	"github.com/CowellTech/gogs-0.12.3/internal/db"
 	"github.com/CowellTech/gogs-0.12.3/internal/route/api/v1/convert"
 )
 
@@ -56,13 +57,14 @@ func ListBranches(c *context.APIContext) {
 
 func CreateBranch(c *context.APIContext, form api.CreateBranchOption) {
 	branchname := form.BranchName
+	repoPath := c.Repo.Repository.RepoPath()
 
-	if git.RepoHasBranch(c.Repo.Repository.RepoPath(), branchname) {
+	if git.RepoHasBranch(repoPath, branchname) {
 		c.Error(errors.New("ErrBranchExisted"), "Branch is existed")
 		return
 	}
 
-	gitRepo, err := git.Open(c.Repo.Repository.RepoPath())
+	gitRepo, err := git.Open(repoPath)
 	if err != nil {
 		c.Error(err, "open repository")
 		return
@@ -70,7 +72,7 @@ func CreateBranch(c *context.APIContext, form api.CreateBranchOption) {
 
 	base := form.Base
 
-	if !git.RepoHasBranch(c.Repo.Repository.RepoPath(), base) {
+	if !git.RepoHasBranch(repoPath, base) {
 		c.Error(errors.New("ErrBranchNotFound"), "Base is not existed")
 		return
 	}
@@ -81,29 +83,39 @@ func CreateBranch(c *context.APIContext, form api.CreateBranchOption) {
 		return
 	}
 
-	baseCommitID, err := gitRepo.BranchCommitID(base)
+	branch := &db.Branch{
+		Name:     branchname,
+		RepoPath: repoPath,
+	}
+	// baseCommitID, err := gitRepo.BranchCommitID(base)
+	// if err != nil {
+	// 	c.Error(errors.New("ErrGitShowRef"), "git show-ref failed")
+	// 	return
+	// }
+
+	// baseCommit, err := gitRepo.CommitByRevision(baseCommitID)
+	// if err != nil {
+	// 	c.Error(errors.New("ErrRevisionNotExist"), "bad revision")
+	// 	return
+	// }
+	commit, err := branch.GetCommit()
 	if err != nil {
-		c.Error(errors.New("ErrGitShowRef"), "git show-ref failed")
+		c.Error(err, "get commit")
 		return
 	}
 
-	baseCommit, err := gitRepo.CommitByRevision(baseCommitID)
-	if err != nil {
-		c.Error(errors.New("ErrRevisionNotExist"), "bad revision")
-		return
-	}
+	// res := struct {
+	// 	Name   string `json:"name"`
+	// 	Commit string `json:"commit"`
+	// 	Msg    string `json:"message"`
+	// }{
+	// 	Name:   branchname,
+	// 	Commit: baseCommitID,
+	// 	Msg:    baseCommit.Message,
+	// }
 
-	res := struct {
-		Name   string `json:"name"`
-		Commit string `json:"commit"`
-		Msg    string `json:"message"`
-	}{
-		Name:   branchname,
-		Commit: baseCommitID,
-		Msg:    baseCommit.Message,
-	}
-
-	c.JSONSuccess(&res)
+	// c.JSONSuccess(&res)
+	c.JSONSuccess(convert.ToBranch(branch, commit))
 }
 
 func DeleteBranch(c *context.APIContext) {
