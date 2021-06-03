@@ -5,7 +5,6 @@
 package repo
 
 import (
-	"encoding/json"
 	"fmt"
 
 	"github.com/CowellTech/git-module-1.1.2"
@@ -70,34 +69,35 @@ func GetEditorconfig(c *context.APIContext) {
 	c.JSONSuccess(def)
 }
 
-func GetRawFiles(c *context.APIContext) {
+func GetRawFiles(c *context.APIContext, fileList []api.DiffFileList) {
 	var (
-		fileList       []api.DiffFileList
+		// fileList       []api.DiffFileList
 		retrunFileList []api.ReturnDiffFile
 	)
-	requestBody := c.Query("fileList")
-	if len(requestBody) < 1 {
-		requestBody, _ = c.Context.Req.Body().String()
-	}
+	// requestBody := c.Query("fileList")
+	// if len(requestBody) < 1 {
+	// 	requestBody, _ = c.Context.Req.Body().String()
+	// }
 
-	err := json.Unmarshal([]byte(requestBody), &fileList)
-	if err != nil {
-		fmt.Println(err)
-		//todo
-	}
+	// err := json.Unmarshal([]byte(requestBody), &fileList)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	//todo
+	// }
 
 	for _, v := range fileList {
 		diffFileInfo := api.ReturnDiffFile{
 			BaseInfo: v,
 		}
 		if v.IsBinary == false {
-			repoPath := db.RepoPath(c.Params(":username"), c.Params(":reponame"))
+			repoPath := db.RepoPath(v.ProjectOwner, v.Project)
 			// repoPath := models.RepoPath(v.ProjectOwner, v.Project)
 			//todo 容错判断
-			c.Repo.GitRepo, err = git.Open(repoPath)
+			gitrepo, err := git.Open(repoPath)
 			if err != nil {
 				fmt.Println("GetRawFiles OpenRepository err ", err)
 			}
+			c.Repo.GitRepo = gitrepo
 			c.Repo.TreePath = v.File
 
 			c.Repo.CommitID = v.BaseDiffBranchCommitID

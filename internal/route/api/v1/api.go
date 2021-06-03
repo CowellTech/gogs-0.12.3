@@ -249,7 +249,7 @@ func RegisterRoutes(m *macaron.Macaron) {
 		})
 
 		m.Group("/repos", func() {
-			m.Post("/raw", repo.GetRawFiles)
+			m.Post("/raw", bind([]api.DiffFileList{}), repo.GetRawFiles)
 			m.Group("/branchs", func() {
 				m.Post("/diff", repo.DiffBranchList)
 			})
