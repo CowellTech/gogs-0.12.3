@@ -293,6 +293,7 @@ func RegisterRoutes(m *macaron.Macaron) {
 				// Add by gbren
 				m.Group("/branch", func() {
 					m.Get("/*", repo.GetBranch)
+					m.Get("/commits/:pagesize/:branch", repo.GetCommitsOfBranch)
 					m.Get("/diff/:branch1/:branch2", repo.DiffBranch)
 					m.Combo("").
 						Post(bind(api.CreateBranchOption{}), repo.CreateBranch)

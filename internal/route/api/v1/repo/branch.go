@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"strconv"
 
 	"github.com/CowellTech/git-module-1.1.2"
 	api "github.com/CowellTech/go-gogs-client"
@@ -227,4 +228,53 @@ func DiffBranchList(c *context.Context) {
 	}
 
 	c.JSON(200, diffList)
+}
+
+func GetCommitsOfBranch(c *context.Context) {
+	branch := c.Params(":branch")
+	ps := c.Params(":pagesize")
+	pagesize, err := strconv.Atoi(ps)
+	if err != nil {
+		c.Error(err, "参数解析失败")
+		return
+	}
+
+	repoPath := c.Repo.Repository.RepoPath()
+
+	type CommitResp struct {
+		ID     string         `json:"id"`
+		Author *git.Signature `json:"author"`
+		// The committer of the commit.
+		Committer *git.Signature `json:"committer"`
+		// The full commit message.
+		Message string `json:"message"`
+	}
+	gitRepo, err := git.Open(repoPath)
+	if err != nil {
+		c.Error(err, "open repository")
+		return
+	}
+
+	if !git.RepoHasBranch(repoPath, branch) {
+		c.Error(errors.New("ErrBranchNotFound"), "branch is not existed")
+		return
+	}
+
+	commits, err := gitRepo.CommitsByPage(branch, 1, pagesize)
+	var cr []CommitResp
+	for _, v := range commits {
+		var c CommitResp
+		c.Author = v.Author
+		c.Committer = v.Committer
+		c.Message = v.Message
+		c.ID = v.ID.String()
+		cr = append(cr, c)
+	}
+
+	if err != nil {
+		c.Error(err, "Get Commits failed")
+		return
+	}
+
+	c.JSON(200, cr)
 }
